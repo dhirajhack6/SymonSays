@@ -15,6 +15,14 @@ document.addEventListener("keypress", function () {
     levelUp();
   }
 });
+// For mobile – start game when screen is touched or clicked
+document.addEventListener("touchstart", function () {
+  if (started == false) {
+    console.log("Game Started (Touch)");
+    started = true;
+    levelUp();
+  }
+});
 
 function gameFlash(btn) {
   btn.classList.add("flash");
